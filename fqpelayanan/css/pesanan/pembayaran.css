@@ -1,0 +1,137 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-title {
+    font-size: 2.25em;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.payment-description {
+    font-size: 1.125em;
+    color: #a0a0a0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 800px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.payment .payment-method {
+    border: 2px solid #009688;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.payment .payment-method:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+.payment .payment-method:hover {
+    transform: scale(1.05);
+}
+
+.payment .payment-method img {
+    width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.payment .payment-method h3 {
+    font-size: 12px;
+    color: #1a1a1a;
+    margin: 10px 0;
+}
+
+.button-containerpmb {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-containerpmb button {
+    background-color: #00a99d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button-containerpmb button:hover {
+    background-color: #008f85;
+}
+
+.selected {
+    border-color: #33d6c7 !important;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+    .payment-title {
+        font-size: 1.75em;
+    }
+
+    .payment-description {
+        font-size: 1em;
+    }
+
+    .payment {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .payment .payment-method {
+        width: 90%;
+        max-width: none;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .button-containerpmb button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .payment-title {
+        font-size: 1.5em;
+    }
+
+    .payment-description {
+        font-size: 0.9em;
+    }
+
+    .button-containerpmb button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
