@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+.cd__main {
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 90px;
+  margin-bottom: 20px;
+}
+
+.cd__main .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+  .cd__main .container {
+    max-width: 1140px;
+  }
+}
+
+.cd__main .d-flex {
+  display: flex;
+  flex-direction: row;
+  background: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  padding: 25px;
+}
+
+.cd__main form {
+  flex: 4;
+}
+
+.cd__main .title {
+  background-color: #009688;
+  border-radius: 5px 5px 0 0;
+  padding: 20px;
+  color: #f6f6f6;
+  font-weight: 500 ;
+  font-size: 24px;
+}
+
+.cd__main h2 {
+  margin: 0;
+  padding-left: 15px;
+}
+
+.cd__main .required {
+  color: red;
+}
+.cd__main input{
+  font-size: 13px;
+}
+.cd__main label input,
+.cd__main label select {
+  border-radius: 8px;
+  padding: 0%;
+}
+
+.cd__main label {
+  font-weight: bold;
+}
+
+.cd__main label,
+table {
+  display: block;
+  margin: 15px;
+}
+
+.cd__main label>span {
+  float: left;
+  width: 25%;
+  margin-top: 12px;
+  padding-right: 10px;
+}
+
+.cd__main label>option {
+  float: left;
+  width: 25%;
+  margin-top: 12px;
+  padding-right: 10px;
+}
+
+.cd__main label input:focus,
+.cd__main label select:focus {
+  outline: none;
+  border-color: #00695c;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+.cd__main input[type="text"],
+.cd__main input[type="tel"],
+.cd__main input[type="email"]{
+  width: 70%;
+  height: 40px;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dadada;
+  color: rgb(29, 29, 29);
+}
+
+.cd__main select {
+  width: 70%;
+  height: 40px;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dadada;
+}
+
+/* Styling Tombol Kembali */
+.back-button {
+  position: fixed;
+  /* Tetap di viewport saat scrolling */
+  top: 100px;
+  left: 20px;
+  background-color: #009688;
+  /* Sesuaikan dengan warna tema Anda */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  z-index: 0;
+  /* Pastikan tombol berada di atas elemen lain */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #04ae9d;
+  /* Warna saat hover */
+  transform: translateY(-2px);
+  /* Efek animasi saat hover */
+  color: #FFFFFF;
+}
+
+.back-button i {
+  font-size: 20px;
+  /* Ukuran ikon */
+}
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+  .cd__main .d-flex {
+    flex-direction: column; /* Ubah menjadi kolom pada layar kecil */
+    padding: 15px; /* Kurangi padding untuk layar kecil */
+  }
+
+  .cd__main label > span {
+    width: 100%; /* Lebar penuh untuk label di layar kecil */
+    padding: 5px;
+    margin-top: 0; /* Hilangkan margin atas */
+  }
+
+  .cd__main input[type="text"],
+  .cd__main input[type="tel"],
+  .cd__main input[type="email"] {
+    width: 100%; /* Leb ar penuh untuk input dan select di layar kecil */
+    height: auto; /* Sesuaikan tinggi untuk input di layar kecil */
+  }
+
+  .cd__main select{
+    width: 100%;
+    height: 50px;
+  }
+  .cd__main .title {
+    text-align: center; /* Pusatkan judul di layar kecil */
+  }
+
+  .back-button {
+    left: 10px; 
+    top: 80px;
+  }
+}
