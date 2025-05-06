@@ -1,0 +1,236 @@
+.table-container {
+    width: 100%;
+    max-width: 1000px;
+    overflow-x: auto;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.search-container {
+    margin: 10px;
+    text-align: right;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 300px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.search-container input:focus {
+    outline: none;
+    border-color: #00695c;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+.striped-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.striped-table th, .striped-table td {
+    padding: 12px 15px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.striped-table thead {
+    background-color: #009688;
+    color: #ffffff;
+}
+
+.striped-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.striped-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.striped-table th {
+    font-weight: bold;
+}
+
+.striped-table td {
+    border-bottom: 1px solid #dddddd;
+}
+
+.status-in-process {
+    background-color: yellow;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #674141;
+}
+.striped-table button {
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;;
+}
+
+.striped-table button:hover {
+    background-color: #00a98e;
+    transform: translateY(-3px);
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-btn:hover {
+    color: #555;
+}
+/* CSS untuk modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 650px;
+    position: relative;
+    font-family: 'DM Sans',sans-serif;
+    animation: fadeIn 0.4s ease; /* Durasi dan timing animasi */
+}
+
+.modal-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.modal-body {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.modal-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.modal-foto {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-detail {
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+}
+.ajukan-pelayanan-btn {
+    background-color: #00695c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ajukan-pelayanan-btn:hover {
+    background-color: #004d40;
+    transform: translateY(-3px);
+}
+/* animaste modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* slide-in dari atas */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* CSS modal untuk tampilan responsif */
+@media (max-width: 650px) {
+    .modal-content {
+        width: 60%; /* Mengatur lebar modal pada layar kecil */
+        margin: 5% auto;
+        padding: 15px;
+    }
+
+    .modal-body {
+        flex-direction: column; /* Mengubah tata letak menjadi kolom */
+        align-items: center; /* Menengahkan konten */
+    }
+
+    .modal-foto {
+        width: 200px; /* Foto memenuhi lebar modal */
+        height: auto;
+        margin-bottom: 15px; /* Memberikan jarak antara foto dan deskripsi */
+    }
+
+    .modal-detail {
+        width: 100%;
+        text-align: left; /* Membuat teks tetap rata kiri */
+    }
+
+    .ajukan-pelayanan-btn {
+        width: 100%; /* Tombol memenuhi lebar modal pada layar kecil */
+        text-align: center;
+    }
+}
+ /* Pagination controls */
+ .pagination-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pagination-container select {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+/* sweetAlert */
+.small-popup {
+    font-size: 14px; /* Ukuran font lebih kecil */
+    background-color: #f1f1f1; /* Warna latar yang lembut */
+    border-radius: 8px; /* Sedikit membulat */
+    width: 300px; /* Lebar popup lebih kecil */
+    padding: 1em; /* Padding dalam dialog */
+}
+
+.small-title {
+    font-size: 18px; /* Ukuran font judul lebih kecil */
+    color: #007BFF; /* Warna teks judul */
+    font-weight: 600; /* Berat font sedang */
+    text-align: center; /* Teks rata tengah */
+}
+
+.small-icon {
+    font-size: 20px; /* Ukuran ikon lebih kecil */
+    color: #007BFF; /* Warna ikon */
+}

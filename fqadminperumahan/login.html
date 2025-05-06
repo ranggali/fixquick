@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Admin FixQuick</title>
+	<link rel="icon" href="assets/logo/logo1.png">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<img src="assets/logo/logo.png" alt="logo" height="100" width="100">
+		<header>Login Admin</header>
+		<form action="#">
+			<div class="field email">
+				<div class="input-area">
+					<input type="text" placeholder="Email">
+					<i class="icon fas fa-envelope"></i>
+					<i class="error error-icon fas fa-exclamation-circle"></i>
+				</div>
+				<div class="error error-txt">Email tidak boleh kosong!</div>
+			</div>
+			<div class="field password">
+				<div class="input-area">
+					<input type="password" placeholder="Kata Sandi">
+					<i class="icon fas fa-lock"></i>
+					<i class="error error-icon fas fa-exclamation-circle"></i>
+				</div>
+				<div class="error error-txt">Kata sandi tidak boleh kosong!</div>
+			</div>
+			<!-- <div class="pass-txt"><a href="#">L?</a></div> -->
+			<input type="submit" value="Login" id="masuk">
+		</form>
+		<div class="sign-txt"> <a href="register.html">Daftar</a></div>
+	</div>
+
+	<script src="js/login.js"></script>
+	<script>
+		document.getElementById("masuk").addEventListener("click", function () {
+			Swal.fire({
+			position: "center",
+			icon: "success",
+			title: "Berhasil Login!",
+			showConfirmButton: false,
+			timer: 900
+			});
+			setTimeout(function () {
+            window.location.href = "index.html";
+			}, 900);
+		});
+	</script>
+
+</body>
+
+</html>

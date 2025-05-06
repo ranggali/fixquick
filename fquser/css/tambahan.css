@@ -1,0 +1,85 @@
+.service-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.service-tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin: 0 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.service-tab.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.service-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+}
+
+.card-header {
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #0056b3;
+}
+
+.no-match-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.no-match-container img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}

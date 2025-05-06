@@ -1,0 +1,320 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Styling Tombol Kembali */
+.back-button {
+    position: absolute; /* Tetap di viewport saat scrolling */
+    top: 20px;
+    left: 20px;
+    background-color: #009688; /* Sesuaikan dengan warna tema Anda */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    z-index: 1000; /* Pastikan tombol berada di atas elemen lain */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #04ae9d; /* Warna saat hover */
+    transform: translateY(-2px); /* Efek animasi saat hover */
+    color: #FFFFFF;
+}
+
+.back-button i {
+    font-size: 20px; /* Ukuran ikon */
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 400px) {
+    .back-button {
+        font-size: 14px;
+        padding: 6px 10px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .back-button i {
+        font-size: 18px;
+    }
+}
+
+
+/* Scope CSS hanya untuk elemen di dalam .forms */
+.forms {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    column-gap: 30px;
+    position: relative; /* Untuk posisi absolute pada .form */
+}
+
+.forms .form {
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: #FFF;
+    transition: opacity 0.3s ease, pointer-events 0.3s ease;
+}
+
+.forms .form-content img {
+    display: block;            
+    margin: 0 auto 20px auto;  
+    max-width: 35%;           
+    height: auto;              
+}
+
+.forms .form.signup {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.forms.show-signup .form.signup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.forms.show-signup .form.login {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.forms header {
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+}
+
+.forms form {
+    margin-top: 30px;
+}
+
+.forms .form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.forms .field label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.forms .field .pilihperan {
+    color: #8b8b8b;
+}
+
+.forms .select-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.forms .field select {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #CACACA;
+    font-size: 16px;
+    padding: 0 40px 0 15px;
+    border-radius: 10px;
+    outline: none;
+    appearance: none;
+    background-color: white;
+    color: #232836;
+    position: relative; /* Dibutuhkan untuk positioning pseudo-element */
+    cursor: pointer;
+}
+
+.forms .field select:focus {
+    border-bottom-width: 2px;
+    border-color: #009688; /* Warna yang sama dengan input ketika fokus */
+}
+
+.forms .arrow-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    font-size: 23px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+    color: #8b8b8b;
+    pointer-events: none; /* Agar klik tetap pada select */
+}
+
+.forms .arrow-up {
+    transform: translateY(-50%) rotate(180deg);
+    color: #009688; /* Opsional: ubah warna saat terbuka */
+}
+
+.forms .field input,
+.forms .field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.forms .field input {
+    outline: none;
+    padding: 0 15px;
+    border: 2px solid #CACACA;
+    border-radius: 10px;
+}
+
+.forms .field input:focus {
+    border-bottom-width: 2px;
+    border-color: #009688;
+}
+
+.forms .eye-icon {
+    position: absolute;
+    top: 110%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.forms .eye-icon-signup {
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.forms .field button {
+    color: #fff;
+    background-color: #009688;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 50px; /* Pastikan tombol memiliki tinggi yang konsisten */
+}
+
+.forms .field button:hover {
+    background-color: #04ae9d;
+}
+
+.forms .form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forms .form-link span a {
+    color: #016dcb;
+    font-weight: 500;
+}
+
+.forms .form-link span,
+.forms .form-link a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+}
+
+.forms .form a {
+    text-decoration: none;
+}
+
+.forms .form-content a:hover {
+    text-decoration: underline;
+}
+
+.forms .line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #d4d4d4;
+}
+
+.forms .line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    /* Anda bisa menambahkan teks atau ikon di sini jika diperlukan */
+}
+
+.forms .media-options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Tambahkan posisi relatif agar ikon terposisi dengan benar */
+    height: 50px; /* Sesuaikan tinggi sesuai kebutuhan */
+    border: 2px solid #CACACA;
+    border-radius: 10px;
+    padding-left: 45px; /* Memberi ruang untuk ikon */
+    margin-bottom: 10px; /* Jarak antar opsi */
+    text-decoration: none; /* Hilangkan underline */
+}
+
+.forms .media-options a.google span,
+.forms .media-options a.apple span {
+    font-weight: 500;
+    opacity: 0.6;
+    color: #232836;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.forms .media-options a.google:hover,
+.forms .media-options a.apple:hover {
+    text-decoration: none;
+}
+
+.forms a.apple .apple-icon {
+    height: 28px;
+    width: 28px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.forms .media-options a.google img.google-img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 400px) {
+    .forms .form {
+        padding: 20px 10px;
+    }
+}
