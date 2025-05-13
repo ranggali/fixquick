@@ -105,10 +105,26 @@ try {
                 exit;
             } else {
                 error_log("Kata sandi salah untuk warga dengan email: $email_warga.");
-                echo "<script>
-                    alert('Kata sandi salah.');
-                    window.location.href = '../login.php';
-                </script>";
+                echo"
+                    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+                    <style>
+                    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+                    .swal2-popup {
+                        font-family: 'DM Sans', sans-serif !important;
+                    }
+                    </style>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            Swal.fire({
+                                icon: 'info',
+                                title: 'Kata Sandi Salah!',
+                                timer: 1500,
+                                showConfirmButton: false
+                            }).then(() => {
+                                window.location.href = '../login.php'; 
+                            });
+                        });
+                    </script>";
                 exit;
             }
         } elseif ($role === 'admin' || $role === 'provider') {
@@ -146,10 +162,26 @@ try {
                 exit;
             } else {
                 error_log("Kata sandi salah untuk $role dengan email: $email.");
-                echo "<script>
-                    alert('Kata sandi salah.');
-                    window.location.href = '../login.php';
-                </script>";
+                echo"
+                    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+                    <style>
+                    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+                    .swal2-popup {
+                        font-family: 'DM Sans', sans-serif !important;
+                    }
+                    </style>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            Swal.fire({
+                                icon: 'info',
+                                title: 'Kata Sandi Salah!',
+                                timer: 1500,
+                                showConfirmButton: false
+                            }).then(() => {
+                                window.location.href = '../login.php'; 
+                            });
+                        });
+                    </script>";
                 exit;
             }
         }
@@ -157,19 +189,51 @@ try {
         // Data tidak ditemukan atau tidak aktif
         $inputEmail = ($role === 'resident') ? $email_warga : $email;
         error_log("Tidak ada akun aktif dengan email: $inputEmail");
-        echo "<script>
-            alert('Data tidak ditemukan atau akun tidak aktif.');
-            window.location.href = '../login.php';
-        </script>";
+        echo"
+                    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+                    <style>
+                    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+                    .swal2-popup {
+                        font-family: 'DM Sans', sans-serif !important;
+                    }
+                    </style>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            Swal.fire({
+                                icon: 'info',
+                                title: 'Data tidak ditemukan atau akun tidak aktif!',
+                                timer: 1500,
+                                showConfirmButton: false
+                            }).then(() => {
+                                window.location.href = '../login.php'; 
+                            });
+                        });
+                    </script>";
         exit;
     }
     
 } catch (Exception $e) {
     error_log("Error: " . $e->getMessage());
-    echo "<script>
-        alert('Terjadi kesalahan pada sistem.');
-        window.location.href = '../login.php';
-    </script>";
+    echo"
+                    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+                    <style>
+                    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+                    .swal2-popup {
+                        font-family: 'DM Sans', sans-serif !important;
+                    }
+                    </style>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            Swal.fire({
+                                icon: 'alert',
+                                title: 'Terjadi Kesalahan Pada Sistem!',
+                                timer: 1500,
+                                showConfirmButton: false
+                            }).then(() => {
+                                window.location.href = '../login.php'; 
+                            });
+                        });
+                    </script>";
     exit;
 } finally {
     if (isset($query)) {
